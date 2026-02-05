@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-@ComponentScan(basePackages = "com.yan.bank.nexusbank") // <-- ADICIONE ISSO
+@ComponentScan(basePackages = "com.yan.bank.nexusbank")
 public class NexusBankApplication {
     public static void main(String[] args) {
         SpringApplication.run(NexusBankApplication.class, args);

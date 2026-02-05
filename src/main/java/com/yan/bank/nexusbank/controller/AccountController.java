@@ -18,10 +18,6 @@ public class AccountController {
 
     private final BankService bankService;
 
-    /**
-     * Lista as contas com quebra de linha para leitura humana.
-     * O Postman exibirá cada conta em uma linha nova, sem colchetes.
-     */
     @GetMapping(produces = "text/plain;charset=UTF-8")
     public String listAll(Pageable pageable) {
         return bankService.findAll(pageable)

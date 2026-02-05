@@ -14,7 +14,7 @@ public class Account {
 
     private BigDecimal balance = BigDecimal.ZERO;
 
-    @Version // <-- Isso aqui brilha os olhos de recrutadores (Controle de Concorrência)
+    @Version
     private Long version;
 
     public void deposit(BigDecimal amount) {

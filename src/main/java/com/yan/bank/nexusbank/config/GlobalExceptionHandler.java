@@ -10,7 +10,6 @@ public class GlobalExceptionHandler {
 
     @ExceptionHandler(RuntimeException.class)
     public ResponseEntity<String> handleRuntimeException(RuntimeException ex) {
-        // Retorna erro 400 (Bad Request) com a mensagem do erro (ex: Saldo insuficiente)
         return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("ERRO: " + ex.getMessage());
     }
 

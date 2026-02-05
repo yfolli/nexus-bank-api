@@ -14,13 +14,11 @@ public class RestExceptionHandler {
 
     @ExceptionHandler(RuntimeException.class)
     public ResponseEntity<String> handleRuntime(RuntimeException e) {
-        // Retorna apenas a string da mensagem
         return ResponseEntity.badRequest().body(e.getMessage());
     }
 
     @ExceptionHandler(MethodArgumentNotValidException.class)
     public ResponseEntity<String> handleValidation(MethodArgumentNotValidException e) {
-        // Extrai apenas o texto do erro de validação
         String msg = e.getBindingResult()
                 .getFieldErrors()
                 .stream()
