@@ -5,11 +5,9 @@ API de sistema bancário robusta desenvolvida com **Spring Boot 3** e **Java 17*
 ## 🛠️ Diferenciais do Projeto
 
 - **Optimistic Locking (@Version):** Implementação de controle de versão nas entidades para evitar o problema de "Lost Update" (quando dois saques simultâneos tentam alterar o mesmo saldo).
-- **UX de API (Interface Amigável):** As respostas de consulta foram customizadas para retornar um extrato legível em texto puro, em vez de um JSON técnico, facilitando a conferência rápida.
+- **UX de API (Interface Amigável):** Endpoint de extrato com formatação customizada para facilitar leitura humana.
 - **Tratamento Global de Erros:** Captura personalizada de exceções (como saldo insuficiente ou valores negativos) para retornar mensagens claras e diretas ao invés de códigos de erro genéricos.
-- **Containerização com Docker:** Projeto pronto para produção, garantindo que a aplicação rode exatamente da mesma forma em qualquer ambiente através do Docker e Docker Compose.
-
-## 🚀 Como Executar
+- **Containerização com Docker:** Projeto containerizado para execução padronizada em diferentes ambientes.
 
 O projeto já está configurado para subir todo o ambiente (API e configurações) automaticamente. Com o Docker instalado, execute na raiz do projeto:
 
